@@ -26,6 +26,7 @@ export default function Layout() {
         { label: "Educational Content", path: "/learn" },
         { label: "SEO Notes", path: "/seo-notes" },
         { label: "Google Ads Notes", path: "/google-ads-notes" },
+        { label: "Google Analytics Notes", path: "/google-analytics-notes" },
         { label: "Blog", path: "/blog" },
       ],
     },
@@ -89,7 +90,7 @@ export default function Layout() {
                       )}
                     </button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-48">
+                  <DropdownMenuContent align="start" className="w-56">
                     {item.submenu.map((subItem) => (
                       <DropdownMenuItem
                         key={subItem.path}
@@ -255,6 +256,16 @@ export default function Layout() {
                     className="hover:text-primary transition-colors"
                   >
                     Google Ads Notes
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => handleNavigation("/google-analytics-notes")}
+                    className="hover:text-primary transition-colors"
+                    data-ocid="ga-notes-footer-link"
+                  >
+                    Google Analytics Notes
                   </button>
                 </li>
                 <li>
