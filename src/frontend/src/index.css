@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Brand Colors - White & Deep Blue Theme */
+    --brand-blue: 0.38 0.18 264;
+    --brand-blue-light: 0.55 0.16 264;
+    --brand-blue-dark: 0.28 0.2 264;
+
+    /* Light Mode Base */
+    --background: 1 0 0;
+    --foreground: 0.15 0.02 264;
+    --card: 0.98 0 0;
+    --card-foreground: 0.15 0.02 264;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 264;
+    --primary: 0.38 0.18 264;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.94 0.03 264;
+    --secondary-foreground: 0.28 0.2 264;
+    --muted: 0.96 0.01 264;
+    --muted-foreground: 0.5 0.05 264;
+    --accent: 0.94 0.03 264;
+    --accent-foreground: 0.28 0.2 264;
+    --destructive: 0.58 0.24 27;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.03 264;
+    --input: 0.88 0.03 264;
+    --ring: 0.38 0.18 264;
+    --chart-1: 0.38 0.18 264;
+    --chart-2: 0.55 0.16 264;
+    --chart-3: 0.28 0.2 264;
+    --chart-4: 0.65 0.15 220;
+    --chart-5: 0.7 0.12 200;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .brand-blue {
+    color: oklch(var(--brand-blue));
+  }
+
+  .bg-brand-blue {
+    background-color: oklch(var(--brand-blue));
+  }
+
+  .border-brand-blue {
+    border-color: oklch(var(--brand-blue));
+  }
+
+  .brand-blue-light {
+    color: oklch(var(--brand-blue-light));
+  }
+
+  .bg-brand-blue-light {
+    background-color: oklch(var(--brand-blue-light));
+  }
+
+  .brand-blue-dark {
+    color: oklch(var(--brand-blue-dark));
+  }
+
+  .bg-brand-blue-dark {
+    background-color: oklch(var(--brand-blue-dark));
+  }
+}
