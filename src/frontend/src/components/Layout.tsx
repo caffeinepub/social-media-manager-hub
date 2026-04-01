@@ -25,6 +25,7 @@ export default function Layout() {
       submenu: [
         { label: "Educational Content", path: "/learn" },
         { label: "SEO Notes", path: "/seo-notes" },
+        { label: "Google Ads Notes", path: "/google-ads-notes" },
         { label: "Blog", path: "/blog" },
       ],
     },
@@ -245,6 +246,15 @@ export default function Layout() {
                     className="hover:text-primary transition-colors"
                   >
                     SEO Notes
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => handleNavigation("/google-ads-notes")}
+                    className="hover:text-primary transition-colors"
+                  >
+                    Google Ads Notes
                   </button>
                 </li>
                 <li>

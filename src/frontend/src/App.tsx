@@ -13,6 +13,7 @@ import CommunityHubPage from "./pages/CommunityHubPage";
 import ContactPage from "./pages/ContactPage";
 import CoursesPage from "./pages/CoursesPage";
 import FAQPage from "./pages/FAQPage";
+import GoogleAdsNotesPage from "./pages/GoogleAdsNotesPage";
 import HomePage from "./pages/HomePage";
 import LearnPage from "./pages/LearnPage";
 import PortfolioPage from "./pages/PortfolioPage";
@@ -113,6 +114,12 @@ const seoNotesRoute = createRoute({
   component: SEONotesPage,
 });
 
+const googleAdsNotesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/google-ads-notes",
+  component: GoogleAdsNotesPage,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   coursesRoute,
@@ -128,6 +135,7 @@ const routeTree = rootRoute.addChildren([
   quizRoute,
   communityRoute,
   seoNotesRoute,
+  googleAdsNotesRoute,
 ]);
 
 const router = createRouter({ routeTree });
