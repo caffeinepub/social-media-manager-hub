@@ -1,25 +1,22 @@
-# The Social Jay – SEO Notes Page
+# JXD Hub
 
 ## Current State
-The site has pages: Home, Courses, Roadmap, Learn, Resources, Blog, Contact, Testimonials, Portfolio, FAQ, Pricing, Quiz, Community. No dedicated SEO Notes page exists.
+JXD Hub has multiple notes pages under the Learn dropdown: SEO Notes, Google Ads Notes, Google Analytics Notes. The navigation includes a Learn submenu with these pages plus Blog.
 
 ## Requested Changes (Diff)
 
 ### Add
-- New `/seo-notes` page with full SEO educational content organized into structured sections
-- Route in App.tsx for the new page
-- Navigation link in Layout.tsx (under Learn or as a standalone nav item)
+- New page `/dropshipping-notes` with comprehensive Dropshipping course content
+- 6 tabs: Introduction, How It Works, Documentation, Product Research, Build Your Store, Suppliers
 
 ### Modify
-- App.tsx: add seoNotesRoute
-- Layout.tsx: add SEO Notes to nav (add under a Learn dropdown or standalone)
+- `App.tsx`: add `dropshippingNotesRoute`
+- `Layout.tsx`: add "Dropshipping Notes" to the Learn submenu and footer
 
 ### Remove
 - Nothing
 
 ## Implementation Plan
-1. Create `src/frontend/src/pages/SEONotesPage.tsx` with all SEO content structured in tabbed/sectioned layout
-2. Sections: Digital Marketing Overview, Key Modules (Click/Impression/CTR/etc), GMB & Local SEO, On-Page SEO, Technical SEO, Backlinks & Off-Page SEO
-3. Include the CTR comparison table, URL structure breakdown, image size reference table, backlink types list
-4. Add route in App.tsx
-5. Add navigation link in Layout.tsx under Learn or Resources
+1. Create `DropshippingNotesPage.tsx` with 6 tabs covering all provided content
+2. Update `App.tsx` to import and register the new route at `/dropshipping-notes`
+3. Update `Layout.tsx` to add Dropshipping Notes to Learn dropdown and footer

@@ -27,6 +27,7 @@ export default function Layout() {
         { label: "SEO Notes", path: "/seo-notes" },
         { label: "Google Ads Notes", path: "/google-ads-notes" },
         { label: "Google Analytics Notes", path: "/google-analytics-notes" },
+        { label: "Dropshipping Notes", path: "/dropshipping-notes" },
         { label: "Blog", path: "/blog" },
       ],
     },
@@ -263,9 +264,17 @@ export default function Layout() {
                     type="button"
                     onClick={() => handleNavigation("/google-analytics-notes")}
                     className="hover:text-primary transition-colors"
-                    data-ocid="ga-notes-footer-link"
                   >
                     Google Analytics Notes
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => handleNavigation("/dropshipping-notes")}
+                    className="hover:text-primary transition-colors"
+                  >
+                    Dropshipping Notes
                   </button>
                 </li>
                 <li>

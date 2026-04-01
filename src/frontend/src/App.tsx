@@ -12,6 +12,7 @@ import BlogPage from "./pages/BlogPage";
 import CommunityHubPage from "./pages/CommunityHubPage";
 import ContactPage from "./pages/ContactPage";
 import CoursesPage from "./pages/CoursesPage";
+import DropshippingNotesPage from "./pages/DropshippingNotesPage";
 import FAQPage from "./pages/FAQPage";
 import GoogleAdsNotesPage from "./pages/GoogleAdsNotesPage";
 import GoogleAnalyticsNotesPage from "./pages/GoogleAnalyticsNotesPage";
@@ -121,6 +122,12 @@ const googleAdsNotesRoute = createRoute({
   component: GoogleAdsNotesPage,
 });
 
+const dropshippingNotesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/dropshipping-notes",
+  component: DropshippingNotesPage,
+});
+
 const googleAnalyticsNotesRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/google-analytics-notes",
@@ -144,6 +151,7 @@ const routeTree = rootRoute.addChildren([
   seoNotesRoute,
   googleAdsNotesRoute,
   googleAnalyticsNotesRoute,
+  dropshippingNotesRoute,
 ]);
 
 const router = createRouter({ routeTree });
